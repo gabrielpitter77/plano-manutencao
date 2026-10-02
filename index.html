@@ -387,4 +387,10 @@ openBrands.add(DATA.find(x=>x.id===cur).marca);
 renderFuel(); renderList(); renderModel();
 </script>
 <a id="locBackCentral" href="https://gabrielpitter77.github.io/painel-frota-parada-2/" title="Voltar &agrave; Central de Pain&eacute;is">&larr; Central</a>
-<style>#locBackCentral{position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;padding:9px 15px;border-radius:999px;background:#011842;color:#FEAC00;font:600 13px/1 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;text-decoration:none;border:1px solid #FEAC00;box-shadow:0 4px 14px rgba(0,0,0,.35);opacity:.93}#locBackCentral:hover{opacity:1;background:#FEAC00;color:#011842}@media print{#locBackCentral{display:none!important}}</style>
+<style>#locBackCentral{display:inline-flex;align-items:center;align-self:center;flex:none;white-space:nowrap;padding:7px 14px;border-radius:999px;background:#011842;color:#FEAC00;font:600 12.5px/1 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;text-decoration:none;border:1px solid #FEAC00;margin-left:12px}#locBackCentral:hover{background:#FEAC00;color:#011842}#locBackCentral.loc-fixed{position:fixed;top:12px;right:16px;z-index:2147483000;box-shadow:0 4px 14px rgba(0,0,0,.35)}@media print{#locBackCentral{display:none!important}}</style>
+<script>(function(){function put(){var a=document.getElementById('locBackCentral');if(!a)return;var h=document.querySelector('header');if(!h){a.className='loc-fixed';return}
+var row=h.querySelector('.header-top,.top-in')||h,k=row.children,last=k[k.length-1];
+if(k.length<2||!last){a.style.marginLeft='auto';row.appendChild(a);if(getComputedStyle(row).display.indexOf('flex')<0){row.style.display='flex';row.style.alignItems='center'}return}
+if(last.children.length&&getComputedStyle(last).display.indexOf('flex')>=0){last.appendChild(a);last.style.flexWrap='wrap';last.style.justifyContent='flex-end';last.style.rowGap='8px';last.style.minWidth='0';return}
+var w=document.createElement('div');w.style.cssText='display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end';row.replaceChild(w,last);w.appendChild(last);w.appendChild(a);a.style.marginLeft='0'}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',put);else put()})();</script>
